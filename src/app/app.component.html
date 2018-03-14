@@ -4,5 +4,11 @@
       {{ word.en }}
     </h4>
     <p>{{ word.vn }}</p>
+    <button class="btn btn-danger" (click)="removeWord(word._id);">
+      Remove
+    </button>
+    <button class="btn btn-success" (click)="toggleWord(word._id);">
+      Toggle
+    </button>
   </div>
 </div>
