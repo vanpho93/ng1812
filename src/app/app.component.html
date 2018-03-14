@@ -1,15 +1,8 @@
 <div class="container">
-  <h3>{{ title }}</h3>
-  <h3>Value = {{ num }}</h3>
-  <button class="btn btn-success" (click)="increase();">
-    Increase
-  </button>
-  <button class="btn btn-warning" (click)="descrease();">
-    Descrease
-  </button>
-  <button class="btn btn-danger" (click)="reset();">
-    Reset
-  </button>
-  <app-word></app-word>
-  <app-list-word></app-list-word>
+  <div *ngFor="let word of words">
+    <h4 class="{{ word.isMemorized ? 'text-success' : 'text-danger' }}">
+      {{ word.en }}
+    </h4>
+    <p>{{ word.vn }}</p>
+  </div>
 </div>

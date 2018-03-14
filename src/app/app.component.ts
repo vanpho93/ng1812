@@ -7,9 +7,15 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'app 123';
-  num = 10;
-  increase() { this.num++; }
-  descrease() { this.num--; }
-  reset() { this.num = 0; }
+  words: Word[] = [
+    { en: 'One', vn: 'Mot', isMemorized: true },
+    { en: 'Two', vn: 'Hai', isMemorized: false },
+    { en: 'Three', vn: 'Ba', isMemorized: false },
+    { en: 'Four', vn: 'Bon', isMemorized: true }
+  ];
+}
+interface Word {
+  en: string;
+  vn: string;
+  isMemorized: boolean;
 }
