@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   txtEn = '';
   txtVn = '';
+  isShowForm = false;
   words: Word[] = [
     { en: 'One', vn: 'Mot', isMemorized: true, _id: 'abcd1' },
     { en: 'Two', vn: 'Hai', isMemorized: false, _id: 'abcd2' },
@@ -31,6 +32,8 @@ export class AppComponent {
     this.words.unshift({
       en: txtEn, vn: txtVn, isMemorized: false, _id: Math.random() +''
     });
+    this.txtEn = '';
+    this.txtVn = '';
   }
 }
 

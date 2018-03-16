@@ -1,6 +1,10 @@
 <div class="container">
   <br>
   <div class="form-group" style="width: 200px">
+    <button
+      class="btn btn-success form-control">
+      Add word
+    </button>
     <input class="form-control" placeholder="English" [(ngModel)]="txtEn">
     <br>
     <input class="form-control" placeholder="Vietnamese" [(ngModel)]="txtVn">
@@ -9,6 +13,13 @@
       class="btn btn-success form-control"
       (click)="addWord()">
       Add word
+    </button>
+    <br>
+    <br>
+    <button
+      class="btn btn-danger form-control"
+      (click)="addWord()">
+      Cancel
     </button>
     <br>
   </div>
