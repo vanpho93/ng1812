@@ -32,7 +32,7 @@
     <br>
   </div>
   <div *ngFor="let word of words">
-    <h4 [style.color]="word.isMemorized ? 'green' : 'red'">
+    <h4 [ngClass]="word.isMemorized ? { thin: true, green: true } : { bolder: true, red: true }">
       {{ word.en }}
     </h4>
     <p>{{ word.vn }}</p>
