@@ -1,4 +1,13 @@
 <div class="container">
+  <br>
+  <div class="form-group" style="width: 200px">
+    <input class="form-control" placeholder="English">
+    <br>
+    <input class="form-control" placeholder="Vietnamese">
+    <br>
+    <button class="btn btn-success form-control">Add word</button>
+    <br>
+  </div>
   <div *ngFor="let word of words">
     <h4 class="{{ word.isMemorized ? 'text-success' : 'text-danger' }}">
       {{ word.en }}
