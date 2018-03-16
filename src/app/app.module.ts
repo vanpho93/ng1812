@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { WordComponent } from './word.component';
+import { WordFormComponent } from './word-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WordComponent
+    WordComponent,
+    WordFormComponent
   ],
   imports: [
     BrowserModule,

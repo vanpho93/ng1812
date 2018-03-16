@@ -9,8 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   txtEn = '';
   txtVn = '';
-  isShowForm = false;
-  imageSource = 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png';
+  
+  // imageSource = 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png';
+  
   words: Word[] = [
     { en: 'One', vn: 'Mot', isMemorized: true, _id: 'abcd1' },
     { en: 'Two', vn: 'Hai', isMemorized: false, _id: 'abcd2' },
@@ -26,10 +27,6 @@ export class AppComponent {
   forgotStyle = {
     fontWeight: 900,
     color: 'red'
-  }
-
-  toggleForm() {
-    this.isShowForm = !this.isShowForm;
   }
 
   removeWord(_id: string) {
@@ -49,7 +46,6 @@ export class AppComponent {
     });
     this.txtEn = '';
     this.txtVn = '';
-    this.toggleForm();
   }
 }
 

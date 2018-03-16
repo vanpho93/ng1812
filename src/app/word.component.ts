@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-word',
     template: `
         <div>
-            <h4 class="text-success">
-              One
+            <h4 [class]="wordInfo.isMemorized ? 'text-success' : 'text-danger'">
+              {{ wordInfo.en }}
             </h4>
-            <p>Mot</p>
+            <p>{{ wordInfo.vn }}</p>
             <button class="btn btn-danger">
               Remove
             </button>
@@ -18,4 +18,6 @@ import { Component } from '@angular/core';
     `
 })
 
-export class WordComponent {}
+export class WordComponent {
+  @Input() wordInfo: any;
+}
