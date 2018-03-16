@@ -10,12 +10,23 @@ export class AppComponent {
   txtEn = '';
   txtVn = '';
   isShowForm = false;
+  imageSource = 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png';
   words: Word[] = [
     { en: 'One', vn: 'Mot', isMemorized: true, _id: 'abcd1' },
     { en: 'Two', vn: 'Hai', isMemorized: false, _id: 'abcd2' },
     { en: 'Three', vn: 'Ba', isMemorized: false, _id: 'abcd3' },
     { en: 'Four', vn: 'Bon', isMemorized: true, _id: 'abcd4' }
   ];
+  
+  memorizedStyle = {
+    fontWeight: 500,
+    color: 'green'
+  }
+
+  forgotStyle = {
+    fontWeight: 900,
+    color: 'red'
+  }
 
   toggleForm() {
     this.isShowForm = !this.isShowForm;

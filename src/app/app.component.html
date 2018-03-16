@@ -1,5 +1,7 @@
 <div class="container">
   <br>
+  <img src="{{ imageSource }}" alt="">
+  <img [src]="imageSource" alt="">
   <div class="form-group" style="width: 200px">
     <button
       class="btn btn-success form-control"
@@ -30,7 +32,7 @@
     <br>
   </div>
   <div *ngFor="let word of words">
-    <h4 class="{{ word.isMemorized ? 'text-success' : 'text-danger' }}">
+    <h4 [style.color]="word.isMemorized ? 'green' : 'red'">
       {{ word.en }}
     </h4>
     <p>{{ word.vn }}</p>
