@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  txtEn = '';
+  txtVn = '';
   words: Word[] = [
     { en: 'One', vn: 'Mot', isMemorized: true, _id: 'abcd1' },
     { en: 'Two', vn: 'Hai', isMemorized: false, _id: 'abcd2' },
@@ -23,7 +25,15 @@ export class AppComponent {
     const word = this.words.find(word => word._id === _id);
     word.isMemorized = !word.isMemorized;
   }
+
+  addWord() {
+    const { txtEn, txtVn } = this;
+    this.words.unshift({
+      en: txtEn, vn: txtVn, isMemorized: false, _id: Math.random() +''
+    });
+  }
 }
+
 interface Word {
   _id: string;
   en: string;
