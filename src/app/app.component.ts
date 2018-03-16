@@ -17,6 +17,10 @@ export class AppComponent {
     { en: 'Four', vn: 'Bon', isMemorized: true, _id: 'abcd4' }
   ];
 
+  toggleForm() {
+    this.isShowForm = !this.isShowForm;
+  }
+
   removeWord(_id: string) {
     const index = this.words.findIndex(word => word._id === _id);
     this.words.splice(index, 1);
@@ -34,6 +38,7 @@ export class AppComponent {
     });
     this.txtEn = '';
     this.txtVn = '';
+    this.toggleForm();
   }
 }
 
