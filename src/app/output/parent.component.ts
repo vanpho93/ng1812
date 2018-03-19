@@ -5,7 +5,11 @@ import { Component } from '@angular/core';
     template: `
         <div>
             <h3>Count = {{ count }}</h3>
-            <app-child></app-child>
+            <app-child
+                (onIncrease)="onIncrease();"
+                (onDescrease)="onDescrease();"
+                (onReset)="onReset();"
+            ></app-child>
         </div>
     `
 })
@@ -13,7 +17,7 @@ import { Component } from '@angular/core';
 export class ParentComponent {
     count = 1;
 
-    increase() { this.count++; }
-    descrease() { this.count--; }
-    reset() { this.count = 0; }
+    onIncrease() { this.count++; }
+    onDescrease() { this.count--; }
+    onReset() { this.count = 0; }
 }
