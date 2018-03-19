@@ -6,11 +6,16 @@ import { AppComponent } from './app.component';
 import { WordComponent } from './word.component';
 import { WordFormComponent } from './word-form.component';
 
+import { ParentComponent } from './output/parent.component';
+import { ChildComponent } from './output/child.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     WordComponent,
-    WordFormComponent
+    WordFormComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
