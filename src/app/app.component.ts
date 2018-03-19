@@ -7,10 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  txtEn = '';
-  txtVn = '';
-  
-  // imageSource = 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png';
   
   words: Word[] = [
     { en: 'One', vn: 'Mot', isMemorized: true, _id: 'abcd1' },
@@ -39,14 +35,7 @@ export class AppComponent {
     word.isMemorized = !word.isMemorized;
   }
 
-  addWord() {
-    const { txtEn, txtVn } = this;
-    this.words.unshift({
-      en: txtEn, vn: txtVn, isMemorized: false, _id: Math.random() +''
-    });
-    this.txtEn = '';
-    this.txtVn = '';
-  }
+  addWord() {}
 }
 
 interface Word {

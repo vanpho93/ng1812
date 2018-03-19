@@ -17,8 +17,7 @@ import { Component, Input } from '@angular/core';
           <input class="form-control" placeholder="Vietnamese" [(ngModel)]="txtVn">
           <br>
           <button
-            class="btn btn-success form-control"
-            (click)="addWord()">
+            class="btn btn-success form-control">
             Add word
           </button>
           <br>
@@ -37,6 +36,8 @@ import { Component, Input } from '@angular/core';
 
 export class WordFormComponent {
   isShowForm = false;
+  txtEn = '';
+  txtVn = '';
 
   toggleForm() {
     this.isShowForm = !this.isShowForm;
