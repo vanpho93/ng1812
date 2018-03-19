@@ -35,7 +35,9 @@ export class AppComponent {
     word.isMemorized = !word.isMemorized;
   }
 
-  addWord() {}
+  onAddWord(word: Word) {
+    this.words.unshift(word);
+  }
 }
 
 interface Word {
