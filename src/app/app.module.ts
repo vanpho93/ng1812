@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { WordComponent } from './word.component';
 import { WordFormComponent } from './word-form.component';
+import { WordFilterComponent } from './word-filter.component';
 
 import { ParentComponent } from './output/parent.component';
 import { ChildComponent } from './output/child.component';
@@ -15,7 +16,8 @@ import { ChildComponent } from './output/child.component';
     WordComponent,
     WordFormComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    WordFilterComponent
   ],
   imports: [
     BrowserModule,

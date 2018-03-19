@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Word } from './types';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  
+  filterStatus = 'SHOW_FORGOT'; // SHOW_MEMORIZED SHOW_FORGOT
   words: Word[] = [
     { en: 'One', vn: 'Mot', isMemorized: true, _id: 'abcd1' },
     { en: 'Two', vn: 'Hai', isMemorized: false, _id: 'abcd2' },
@@ -38,11 +39,16 @@ export class AppComponent {
   onAddWord(word: Word) {
     this.words.unshift(word);
   }
-}
 
-interface Word {
-  _id: string;
-  en: string;
-  vn: string;
-  isMemorized: boolean;
+  getFilteredWord() {
+    return this.words.filter(word => {
+      if (this.filterStatus === 'SHOW_ALL') return true;
+      if (this.filterStatus === 'SHOW_FORGOT') return !word.isMemorized;
+      return word.isMemorized;
+    });
+  }
+
+  onChangeFilterStatus(newStatus: string) {
+    this.filterStatus = newStatus;
+  }
 }
