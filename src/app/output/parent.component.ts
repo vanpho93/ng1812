@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
         <div>
             <h3>Count = {{ count }}</h3>
             <app-child
-                (onIncrease)="onIncrease();"
-                (onDescrease)="onDescrease();"
+                (onChange)="onChange($event)"
                 (onReset)="onReset();"
             ></app-child>
         </div>
@@ -16,8 +15,8 @@ import { Component } from '@angular/core';
 
 export class ParentComponent {
     count = 1;
-
-    onIncrease() { this.count++; }
-    onDescrease() { this.count--; }
+    onChange(isIncrease: boolean) {
+        isIncrease ? this.count++ : this.count--;
+    }
     onReset() { this.count = 0; }
 }
