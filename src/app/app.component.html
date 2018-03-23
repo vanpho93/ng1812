@@ -1,15 +1,3 @@
 <div class="container">
-  <br>
-  <app-word-form (onAddWord)="onAddWord($event)"></app-word-form>
-  <app-word-filter
-    [filterStatus]="filterStatus"
-    (onChangeFilterStatus)="onChangeFilterStatus($event)"
-  ></app-word-filter>
-  <div *ngFor="let word of getFilteredWord()">
-    <app-word
-      [wordInfo]="word"
-      (onRemoveWord)="onRemoveWord($event)"
-      (onToggleWord)="onToggleWord($event)"></app-word>
-  </div>
-  <app-parent></app-parent>
+  App Component works!
 </div>
