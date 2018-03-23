@@ -13,11 +13,17 @@ import { Observable } from 'rxjs/Observable';
 
 export class AppComponent {
   count: Observable<number>;
-  constructor(private store: Store<any>){
-    this.count = store.pipe(select('count'));
+  constructor(private store: Store<AppState>){
+    // this.count = store.pipe(select('count'));
+    this.count = this.store.select('school').select('name');
   }
 
   increase() {
     this.store.dispatch({ type: 'INCREASE' });
   }
+}
+
+interface AppState {
+  count: number;
+  school: { name: number }
 }
